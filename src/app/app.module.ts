@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ChatService } from './services/chat.service';
 import { VoterComponent } from './voter/voter.component';
 import { DisplayComponent } from './display/display.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DisplayComponent } from './display/display.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NoopAnimationsModule
   ],
   providers: [ChatService],
   bootstrap: [AppComponent]
