@@ -7,6 +7,11 @@ import { ChatService } from './services/chat.service';
 import { VoterComponent } from './voter/voter.component';
 import { DisplayComponent } from './display/display.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import { NgxGaugeModule } from 'ngx-gauge';
+import { GaugeModule } from 'angular-gauge';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +22,11 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    NgxGaugeModule,
+    GaugeModule.forRoot()
   ],
   providers: [ChatService],
   bootstrap: [AppComponent]

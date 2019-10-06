@@ -10,6 +10,11 @@ export class DisplayComponent implements OnInit {
 
   votes:number = 0;
 
+
+  gaugeType = "semi";
+  gaugeValue = 0;
+  gaugeLabel = "Speed";
+
   constructor(
     private chatService: ChatService
 
@@ -28,6 +33,11 @@ export class DisplayComponent implements OnInit {
     this.chatService.getVotes().subscribe((votes:number) =>{
       this.votes = votes
     })
+  }
+
+  reset(){
+    let currentVotes = this.votes;
+    this.sendVote(-currentVotes)
   }
 
 }

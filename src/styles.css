@@ -1,4 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0; 
+    font-family: Roboto, 
+    "Helvetica Neue", sans-serif; 
+    background-color: #d6b800ff;
+}
+
+.custom-button{
+    margin-top: 50vh;
+    width: 40vw;
+    height: 10vh;
+}
+
+.row{
+    height: 80vh;
+}
+
+img{
+    width: 40vw;
+}
+
+.center{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.question{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+mwl-gauge {
+    width: 60vw;
+    display: inline-block;
+    padding: 10px;
+  }
+  mwl-gauge > .gauge > .dial {
+    stroke: #eee;
+    stroke-width: 5;
+    fill: rgba(0,0,0,0);
+  }
+  mwl-gauge > .gauge > .value {
+    stroke: #D84315;
+    stroke-width: 5;
+    fill: rgba(0,0,0,0);
+  }
+  mwl-gauge > .gauge > .value-text {
+    fill: #D84315;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+  }

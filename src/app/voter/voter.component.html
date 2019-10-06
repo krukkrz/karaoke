@@ -1,7 +1,12 @@
+<!-- <div class="question">Dać mu dalej śpiewać?</div> -->
+<div class="row justify-content-center align-items-end">
+    <div class="col-6 center">
+        <img src="../../assets/no.png">
+        <button [disabled]="votes ==-10 || votes == 10" mat-raised-button class="custom-button" color="primary" (click)="sendVote(-1)">Nope...</button>
+    </div>
 
-
-{{votes}}
-<br>
-
-<button (click)="sendVote(1)">+</button>
-<button (click)="sendVote(-1)">-</button>
+    <div class="col-6 center">
+        <img src="../../assets/yeah.png">
+        <button [disabled]="votes ==-10 || votes == 10" mat-raised-button class="custom-button" color="primary"  (click)="sendVote(1)">Yeah!</button>
+    </div>
+</div>
