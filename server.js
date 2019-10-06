@@ -2,8 +2,15 @@
 //Install express server
 const express = require('express');
 const path = require('path');
-
 const app = express();
+
+// let express2 = require('express')
+// let app2 = express2();
+let http = require('http');
+let server = http.Server(app);
+let socketIO = require('socket.io');
+let io = socketIO(server);
+const port = 3000;
 
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/karaoke-client'));
@@ -18,13 +25,6 @@ app.listen(process.env.PORT || 8080);
 
 
 
-let express2 = require('express')
-let app2 = express2();
-let http = require('http');
-let server = http.Server(app2);
-let socketIO = require('socket.io');
-let io = socketIO(server);
-const port = process.env.PORT || 3000;
 
 var counter = 0;
 
