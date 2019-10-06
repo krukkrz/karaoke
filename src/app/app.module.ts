@@ -3,16 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ChatService } from './services/chat.service';
+import { VoterComponent } from './voter/voter.component';
+import { DisplayComponent } from './display/display.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VoterComponent,
+    DisplayComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
