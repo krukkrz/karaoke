@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChatService } from '../services/chat.service';
 
 @Component({
   selector: 'app-voter',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VoterComponent implements OnInit {
 
-  constructor() { }
+  votes:number = 0;
 
-  ngOnInit() {
+  constructor(
+    private chatService: ChatService
+  ) { }
+
+  ngOnInit() {    
+    this.sendVote(0);
+    this.getVotes();
+  }
+
+
+  sendVote(vote:number){
+    this.chatService.vote(vote);
+  }
+
+  private getVotes(){
+    this.chatService.getVotes().subscribe((votes:number) =>{
+      this.votes = votes
+    })
   }
 
 }
