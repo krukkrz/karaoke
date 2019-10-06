@@ -10,11 +10,6 @@ export class DisplayComponent implements OnInit {
 
   votes:number = 0;
 
-
-  gaugeType = "semi";
-  gaugeValue = 0;
-  gaugeLabel = "Speed";
-
   constructor(
     private chatService: ChatService
 
