@@ -36,7 +36,7 @@ export class DisplayComponent implements OnInit {
     })
   }
 
-  private countVotes(votes) {
+  private countVotes(votesArray) {
     this.nope = 0;
     this.yeah = 0;
     this.notVoted = 0;
@@ -57,17 +57,17 @@ export class DisplayComponent implements OnInit {
 
     console.log("before counting");
     
-    Object.keys(votes).forEach(key => {
+    Object.keys(votesArray).forEach(key => {
       console.log("while counting");
       
         this.total++
-        if(votes[key].vote == -1){
+        if(votesArray[key].vote == -1){
           this.nope++;
         }
-        if(votes[key].vote == 1){
+        if(votesArray[key].vote == 1){
           this.yeah++;
         }
-        if(votes[key].vote == 0){
+        if(votesArray[key].vote == 0){
           this.notVoted++;
         }
     });
