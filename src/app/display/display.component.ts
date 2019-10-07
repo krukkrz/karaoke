@@ -55,7 +55,11 @@ export class DisplayComponent implements OnInit {
     //   }
     // }
 
+    console.log("before counting");
+    
     Object.keys(votes).forEach(key => {
+      console.log("while counting");
+      
         this.total++
         if(votes[key].vote == -1){
           this.nope++;
