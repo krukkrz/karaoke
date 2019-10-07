@@ -41,32 +41,32 @@ export class DisplayComponent implements OnInit {
     this.yeah = 0;
     this.notVoted = 0;
     this.total = 0;
-    for (let i = 0; i < votes.length; i++) {
-      const vote = votes[i];
-      this.total++
-      if(vote.vote == -1){
-        this.nope++;
-      }
-      if(vote.vote == 1){
-        this.yeah++;
-      }
-      if(vote.vote == 0){
-        this.notVoted++;
-      }
-    }
+    // for (let i = 0; i < votes.length; i++) {
+    //   const vote = votes[i];
+    //   this.total++
+    //   if(vote.vote == -1){
+    //     this.nope++;
+    //   }
+    //   if(vote.vote == 1){
+    //     this.yeah++;
+    //   }
+    //   if(vote.vote == 0){
+    //     this.notVoted++;
+    //   }
+    // }
 
-    // votes.forEach(vote => {
-    //     this.total++
-    //     if(vote.vote == -1){
-    //       this.nope++;
-    //     }
-    //     if(vote.vote == 1){
-    //       this.yeah++;
-    //     }
-    //     if(vote.vote == 0){
-    //       this.notVoted++;
-    //     }
-    // });
+    votes.forEach(vote => {
+        this.total++
+        if(vote.vote == -1){
+          this.nope++;
+        }
+        if(vote.vote == 1){
+          this.yeah++;
+        }
+        if(vote.vote == 0){
+          this.notVoted++;
+        }
+    });
   }
 
   reset(){
