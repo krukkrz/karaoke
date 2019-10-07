@@ -55,15 +55,15 @@ export class DisplayComponent implements OnInit {
     //   }
     // }
 
-    votes.forEach(vote => {
+    Object.keys(votes).forEach(key => {
         this.total++
-        if(vote.vote == -1){
+        if(votes[key].vote == -1){
           this.nope++;
         }
-        if(vote.vote == 1){
+        if(votes[key].vote == 1){
           this.yeah++;
         }
-        if(vote.vote == 0){
+        if(votes[key].vote == 0){
           this.notVoted++;
         }
     });
