@@ -34,33 +34,15 @@ img{
     font-size: 30px;
 }
 
-
-mwl-gauge {
-    /* width: 100%; */
-    /* display: inline-block; */
-    /* display: initial; */
-    /* display: inline; */
-    /* display: block; */
-    padding: 10px;
-}
-mwl-gauge > .gauge > .dial {
-    stroke: #eee;
-    stroke-width: 5;
-    fill: rgba(0,0,0,0);
-}
-mwl-gauge > .gauge > .value {
-    stroke: #D84315;
-    stroke-width: 5;
-    fill: rgba(0,0,0,0);
-}
-mwl-gauge > .gauge > .value-text {
-    fill: #D84315;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 1em;
-}
-
 .gauge{
-    width:60vw;
+    max-width:60vw;
     max-height: 500px;   
+}
+
+.vote{
+   max-height: 40vh;
+}
+
+.cust-button{
+    text-align: center
 }

@@ -1,16 +1,18 @@
 <div class="row justify-content-center align-items-center">
-    <div class="col-12 center gauge">
-            <mwl-gauge
-                [min]="-10"
-                [max]="10"
-                [dialStartAngle]="90"
-                [dialEndAngle]="90.001"
-                [value]="votes"
-                [animated]="true"
-                [animationDuration]="0"
-                >
-            </mwl-gauge>
+    <div class="col-12 gauge">
+            <h2 class="example-h2">Brak głosu</h2> 
+            <mat-progress-bar mode="determinate" [value]="(notVoted-1)/(total-1)*100"></mat-progress-bar>
+
+            <br><br>
+            <h2 class="example-h2">Niech gra!</h2> 
+            <mat-progress-bar mode="determinate" [value]="yeah/(total-1)*100"></mat-progress-bar> 
+            
+            <br><br>
+            <h2 class="example-h2">Niech spada!</h2> 
+            <mat-progress-bar mode="determinate" [value]="nope/(total-1)*100"></mat-progress-bar>
     </div>
-    <button mat-raised-button class="custom-button" color="primary"  (click)="reset()">Reset</button>
+    <div class="col-12 cust-button">
+        <button mat-raised-button class="custom-button" color="primary"  (click)="reset()">Reset</button>
+    </div>
 </div>
 

@@ -10,6 +10,11 @@ export class DisplayComponent implements OnInit {
 
   votes:number = 0;
 
+  notVoted = 0;
+  yeah = 0;
+  nope = 0;
+  total = 0;
+
   constructor(
     private chatService: ChatService
 
@@ -27,12 +32,31 @@ export class DisplayComponent implements OnInit {
   private getVotes(){
     this.chatService.getVotes().subscribe((votes:number) =>{
       this.votes = votes
+      this.countVotes(this.votes);
     })
   }
 
+  private countVotes(votes) {
+    this.nope = 0;
+    this.yeah = 0;
+    this.notVoted = 0;
+    this.total = 0;
+    votes.forEach(vote => {
+        this.total++
+        if(vote.vote == -1){
+          this.nope++;
+        }
+        if(vote.vote == 1){
+          this.yeah++;
+        }
+        if(vote.vote == 0){
+          this.notVoted++;
+        }
+    });
+  }
+
   reset(){
-    let currentVotes = this.votes;
-    this.sendVote(-currentVotes)
+    this.chatService.reset();
   }
 
 }

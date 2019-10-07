@@ -10,7 +10,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { NgxGaugeModule } from 'ngx-gauge';
-import { GaugeModule } from 'angular-gauge';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 @NgModule({
@@ -26,7 +26,7 @@ import { GaugeModule } from 'angular-gauge';
     MatToolbarModule,
     MatButtonModule,
     NgxGaugeModule,
-    GaugeModule.forRoot()
+    MatProgressBarModule
   ],
   providers: [ChatService],
   bootstrap: [AppComponent]
