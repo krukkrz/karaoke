@@ -3,8 +3,8 @@ import { Observable } from 'rxjs/internal/Observable';
 
 export class ChatService {
 
-  // private url = 'https://still-inlet-93989.herokuapp.com';
-  private url = 'http://localhost:3000';
+  private url = 'https://still-inlet-93989.herokuapp.com';
+  // private url = 'http://localhost:3000';
   private socket;    
 
   constructor() {
