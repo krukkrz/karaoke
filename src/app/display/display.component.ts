@@ -36,6 +36,8 @@ export class DisplayComponent implements OnInit {
     })
   }
 
+
+  // tutaj jest błąd: spróbuj nadać typ zmiennej votesArray
   private countVotes(votesArray) {
     this.nope = 0;
     this.yeah = 0;
@@ -57,17 +59,17 @@ export class DisplayComponent implements OnInit {
 
     console.log("before counting");
     
-    Object.keys(votesArray).forEach(key => {
+    Object.keys(votesArray).forEach(id => {
       console.log("while counting");
       
         this.total++
-        if(votesArray[key].vote == -1){
+        if(votesArray[id].vote == -1){
           this.nope++;
         }
-        if(votesArray[key].vote == 1){
+        if(votesArray[id].vote == 1){
           this.yeah++;
         }
-        if(votesArray[key].vote == 0){
+        if(votesArray[id].vote == 0){
           this.notVoted++;
         }
     });
