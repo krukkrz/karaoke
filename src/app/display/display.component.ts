@@ -60,34 +60,34 @@ export class DisplayComponent implements OnInit {
 
     console.log("before counting");
     
-    // Object.keys(votesArray).forEach(id => {
-    //   console.log("while counting");
+    Object.keys(votesArray).forEach(id => {
+      console.log("while counting");
       
-    //     this.total++
-    //     if(votesArray[id].vote == -1){
-    //       this.nope++;
-    //     }
-    //     if(votesArray[id].vote == 1){
-    //       this.yeah++;
-    //     }
-    //     if(votesArray[id].vote == 0){
-    //       this.notVoted++;
-    //     }
-    // });
-
-    votesArray.forEach(vote => {
-      console.log("while counting");      
         this.total++
-        if(vote.vote == -1){
+        if(votesArray[id].vote == -1){
           this.nope++;
         }
-        if(vote.vote == 1){
+        if(votesArray[id].vote == 1){
           this.yeah++;
         }
-        if(vote.vote == 0){
+        if(votesArray[id].vote == 0){
           this.notVoted++;
         }
     });
+
+    // votesArray.forEach(vote => {
+    //   console.log("while counting");      
+    //     this.total++
+    //     if(vote.vote == -1){
+    //       this.nope++;
+    //     }
+    //     if(vote.vote == 1){
+    //       this.yeah++;
+    //     }
+    //     if(vote.vote == 0){
+    //       this.notVoted++;
+    //     }
+    // });
   }
 
   reset(){
