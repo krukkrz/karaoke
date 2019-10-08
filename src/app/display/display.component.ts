@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatService } from '../services/chat.service';
+import { Vote } from '../models/vote.model';
 
 @Component({
   selector: 'app-display',
@@ -8,7 +9,7 @@ import { ChatService } from '../services/chat.service';
 })
 export class DisplayComponent implements OnInit {
 
-  votes = [];
+  votes:Vote[] = [];
 
   notVoted = 0;
   yeah = 0;
@@ -30,7 +31,7 @@ export class DisplayComponent implements OnInit {
   }
 
   private getVotes(){
-    this.chatService.getVotes().subscribe((votes) =>{
+    this.chatService.getVotes().subscribe((votes:Vote[]) =>{
       this.votes = votes
       this.countVotes(this.votes);
     })
