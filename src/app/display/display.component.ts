@@ -33,13 +33,13 @@ export class DisplayComponent implements OnInit {
   private getVotes(){
     this.chatService.getVotes().subscribe((votes:Vote[]) =>{
       this.votes = votes
+      console.log(this.votes);      
       this.countVotes(this.votes);
     })
   }
 
 
-  // tutaj jest błąd: spróbuj nadać typ zmiennej votesArray
-  private countVotes(votesArray) {
+  private countVotes(votesArray:Vote[]) {
     this.nope = 0;
     this.yeah = 0;
     this.notVoted = 0;
