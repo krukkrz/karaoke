@@ -8,7 +8,7 @@ import { ChatService } from '../services/chat.service';
 })
 export class DisplayComponent implements OnInit {
 
-  votes:number = 0;
+  votes = [];
 
   notVoted = 0;
   yeah = 0;
@@ -30,7 +30,7 @@ export class DisplayComponent implements OnInit {
   }
 
   private getVotes(){
-    this.chatService.getVotes().subscribe((votes:number) =>{
+    this.chatService.getVotes().subscribe((votes) =>{
       this.votes = votes
       this.countVotes(this.votes);
     })
@@ -59,17 +59,31 @@ export class DisplayComponent implements OnInit {
 
     console.log("before counting");
     
-    Object.keys(votesArray).forEach(id => {
-      console.log("while counting");
+    // Object.keys(votesArray).forEach(id => {
+    //   console.log("while counting");
       
+    //     this.total++
+    //     if(votesArray[id].vote == -1){
+    //       this.nope++;
+    //     }
+    //     if(votesArray[id].vote == 1){
+    //       this.yeah++;
+    //     }
+    //     if(votesArray[id].vote == 0){
+    //       this.notVoted++;
+    //     }
+    // });
+
+    votesArray.forEach(vote => {
+      console.log("while counting");      
         this.total++
-        if(votesArray[id].vote == -1){
+        if(vote.vote == -1){
           this.nope++;
         }
-        if(votesArray[id].vote == 1){
+        if(vote.vote == 1){
           this.yeah++;
         }
-        if(votesArray[id].vote == 0){
+        if(vote.vote == 0){
           this.notVoted++;
         }
     });
