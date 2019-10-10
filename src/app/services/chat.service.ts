@@ -1,10 +1,10 @@
 import * as io from 'socket.io-client';
 import { Observable } from 'rxjs/internal/Observable';
+import { environment } from 'src/environments/environment';
 
 export class ChatService {
 
-  private url = 'https://still-inlet-93989.herokuapp.com';
-  // private url = 'http://localhost:3000';
+  private url = environment.baseUrl;
   private socket;    
 
   constructor() {

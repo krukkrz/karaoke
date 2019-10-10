@@ -1,11 +1,11 @@
 <div class="row justify-content-center align-items-center">
     <div class="col-6 center vote">
-        <img src="../../assets/no.png">
+        <img src="../../assets/no.png"><br>
         <button [disabled]="!canVote" mat-raised-button class="custom-button" color="primary" (click)="sendVote(-1)">Nope...</button>
     </div>
 
     <div class="col-6 center vote">
-        <img src="../../assets/yeah.png">
+        <img src="../../assets/yeah.png"><br>
         <button [disabled]="!canVote" mat-raised-button class="custom-button" color="primary" (click)="sendVote(1)">Yeah!</button>
     </div>
 </div>

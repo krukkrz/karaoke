@@ -4,8 +4,8 @@ html, body { height: 100%; }
 body { 
     margin: 0; 
     font-family: Roboto, 
-    "Helvetica Neue", sans-serif; 
-    background-color: #d6b800ff;
+    "Helvetica Neue", sans-serif;     
+    background-color: rgb(218, 194, 44);
 }
 
 .custom-button{
@@ -16,10 +16,6 @@ body {
 
 .row{
     height: 80vh;
-}
-
-img{
-    width: 40vw;
 }
 
 .center{
@@ -40,9 +36,15 @@ img{
 }
 
 .vote{
-   max-height: 40vh;
+    max-height: 40vh;
+    max-width: 340px;
 }
 
-.cust-button{
-    text-align: center
+.vote img{
+    width: 40vw;
+    max-width: 300px;
+}
+
+.custom-button{
+    max-width: 300px;
 }

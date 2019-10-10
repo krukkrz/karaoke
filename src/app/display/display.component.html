@@ -1,17 +1,17 @@
 <div class="row justify-content-center align-items-center">
     <div class="col-12 gauge">
-            <h2 class="example-h2">Brak głosu</h2> 
+            <h2 class="example-h2">Brak głosu {{(notVoted-1)/(total-1)*100 | number:'1.0-0'}} %</h2> 
             <mat-progress-bar mode="determinate" [value]="(notVoted-1)/(total-1)*100"></mat-progress-bar>
 
             <br><br>
-            <h2 class="example-h2">Niech śpiewa!</h2> 
+            <h2 class="example-h2">Niech śpiewa! {{yeah/(total-1)*100 | number:'1.0-0'}}%</h2> 
             <mat-progress-bar mode="determinate" [value]="yeah/(total-1)*100"></mat-progress-bar> 
             
             <br><br>
-            <h2 class="example-h2">Niech spada!</h2> 
+            <h2 class="example-h2">Niech spada! {{nope/(total-1)*100 | number:'1.0-0'}}%</h2> 
             <mat-progress-bar mode="determinate" [value]="nope/(total-1)*100"></mat-progress-bar>
     </div>
-    <div class="col-12 cust-button">
+    <div class="col-12 center">
         <button mat-raised-button class="custom-button" color="primary"  (click)="reset()">Reset</button>
     </div>
 </div>
